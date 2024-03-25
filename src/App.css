@@ -1,7 +1,8 @@
 .App {
   text-align: center;
-  background-color: #aaa;
-  height: 710px;
+  font-family: monospace;
+  min-height: 695px;
+  transition:all .3s ease-in-out;
 }
 .button-form
 {
@@ -18,11 +19,7 @@
   margin-right: 10px;
   border-radius: 8px;
 }
-.header-link
-{
-  padding: 10px;
-  margin: 10px;
-}
+
 .header-icon
 {
   margin: 16px;
@@ -34,17 +31,28 @@
   
   right: 0px;
 }
+.bg_dark
+{
+  background-image: linear-gradient(140deg, #0a0a0a 0%, #151515 50%, #353535 75%);
+}
+.bg_light
+{
+  background-image: linear-gradient(140deg, #dcdcdc 0%, #d3d3d3 50%, #808080 90%);
+}
 .dark 
 {
-  background-color: #333;
+
   color: #eee;
-  border-radius: 17px;
 }
 .light
 {
-  background-color: #ddd;
   color: #333;
-  border-radius: 17px;
+}
+.logo
+{
+  width: 60px;
+  height: 60px;
+  padding: 10px;
 }
 .form-
 {
@@ -65,13 +73,18 @@
 }
 .text_e
 {
-  max-height: 360px;
+  height: 160px;
   max-width: 90%;
   min-height: 200px;
   margin: 30px auto;
 }
 .navbar>.container{
   min-width: 97.5%;
+}
+.d_inline
+{
+  font-weight: bold;
+  display: inline;
 }
 .App-header {
   background-color: #282c34;
@@ -85,10 +98,10 @@
 }
 .link
 {
-  
+  max-width: 30px;
   padding-top: 10px;
   margin: auto 20px;
-  transition:all .2s ease-in-out;
+  transition:all 1s ease-in-out;
   text-decoration:none;
   text-decoration-line: none;
   text-decoration-style: none;
@@ -108,6 +121,70 @@
   border-radius: 0px;
 }
 .contact{
-  height: 25px;
-  width: 25px;
+  height: 30px;
+  width: 30px;
+}
+.tester
+{
+  height: 841px;
+  background-repeat: unset;
+  font-size: 22px;
+}
+.l-paper{
+  width: 60px;
+  height: 50px;
+  text-align: center;
+  background-color: rgb(55, 173, 55);
+  position: absolute;
+  border-radius: 30px 0px 30px 0px;
+  transform: rotate(-20deg);
+}
+.r-paper{
+  width: 75px;
+  height: 50px;
+  text-align: center;
+  background-color: rgb(55, 173, 55);
+  position: absolute;
+  border-radius: 0px 30px 0px 30px;
+  transform: rotate(20deg);
+
+}
+.father
+{
+  position: relative;
+  font-size: 28px;
+  text-align: center;
+  color: #eee;
+  width: 100px;
+}
+.father_
+{
+  position: relative;
+  font-size: 24px;
+  text-align: center;
+  color: #eee;
+  width: 100px;
+}
+.facebook:hover
+{
+  transition:all .3s ease-in-out;
+  transform: scale(1.2, 1.2);
+  fill: #4267B2;
+}
+.telegram:hover
+{
+  transition:all .3s ease-in-out;
+  transform: scale(1.2, 1.2);
+  fill: #0088cc;
+}
+.email:hover
+{
+  transition:all .3s ease-in-out;
+  transform: scale(1.2, 1.2);
+
+}
+.svgs
+{
+  width: 100%;
+  height: 100%;
 }

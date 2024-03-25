@@ -5,6 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import InputGroup from 'react-bootstrap/InputGroup';
 import  theme  from './state';
 import './App.css';
+import axios from "axios";
 
 var button_color="light";
 var txt="";
@@ -20,21 +21,25 @@ function Body() {
     
     const f = async () =>{
       document.getElementById("shorted").setAttribute('value',"loading ...");
-      const requestOptions = {
-        method: 'POST',
-        body: JSON.stringify({
-          long_url : urlpost
-          }),
-        headers: { 
-          'Content-Type': 'application/json',
-          "Accept":"application/json" 
-          }
-        };
         
-        const response = await fetch('https://t.ly/api/v1/link/shorten?api_token=2jOnYQVMeLnKlujdzRbHVU8yw2lpfozR2cWVAXFqgUdHCqOUw06NPI570lPo', requestOptions )
-        const result = await response.json();
-        txt=result.short_url
-          document.getElementById("shorted").setAttribute('value',result.short_url);
+        try {
+          
+          const userData = {
+            url:"http://google.com/"
+          };
+          axios.post("https://shrtlnk.dev/api/v2/link", userData,{
+            headers:{
+              'Content-Type': 'application/json',
+                  'api-key': 'oeqOBL2wgdeh0ypSiIqUacT7GFf4tDCOjm3PUpIBAzC0O',
+            }
+          }).then((response) => {
+            console.log(response.data);
+          }).catch((error) => {
+            console.log(error);
+        })
+      } catch (e) {
+          throw e;
+      }
       }
 
     return (
